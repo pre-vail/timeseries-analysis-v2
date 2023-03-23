@@ -1,3 +1,70 @@
+# Timeseries Analysis Version 2 #
+This is verion 2 of the original timeseries analysis package (v1) written by [Julien Loutre](https://github.com/26medias). Although I preserved most of the original code, I did not consult with the v1 author, so none of this has been endorsed by him. But, to be clear, he definitely gets all of the credit for creating something that is powerful yet easy-to-use.
+
+The main thing I did was to add a Prediction class which makes future predictions based on a given data set. Notes are given where I made slight changes to some of the v1 code. Lastly, this is a work in progress.
+
+## Installation ##
+`npm install timeseries-analysis-v2`
+
+
+## CLI Args ##
+(s) strategy name; default = Prediction
+
+(n) number of predictions to make; default = 1
+
+(o) offset of first prediction; default = 0 = after last know value, 1 = predict last known value
+
+(u) make predictions based on the noise instead of the signal; default = false (this is suggested as it gives better predictions)
+
+(k) keep the outliers; default = false
+
+(v) verbosity that can be increased; default = 0 (silent), max = 3
+
+
+## CLI Examples ##
+`node .`
+
+`node . -s Prediction`
+
+`node . -s Prediction -n 3 -v 1`
+
+`node . -s Prediction -o 4 -v 1`
+
+`node . -s Prediction -u -v 1`
+
+`node . -s Prediction -uk -v 1`
+
+`node . -s Prediction -uk -n 3 -v 1`
+
+`node . -s Prediction -o 4 -v 1`
+
+`node . -s Prediction -n 2 -o 1 -v 1`
+
+## Prediction ##
+`npm test ./test/strategy/Prediction/Prediction.test.js`
+
+
+The controls for the Prediction class are located at the top of the `./strategy/Prediction/Prediction.js` file.
+
+`const PERIOD_RANGE_LOW = 5`
+
+`const PERIOD_RANGE_HIGH = 20`
+
+
+`const OUTLIERS_RANGE_LOW = 2.0`
+
+`const OUTLIERS_RANGE_HIGH = 3.0`
+
+
+`const SMOOTHING_RANGE_LOW = 1`
+
+`const SMOOTHING_RANGE_HIGH = 3`
+
+
+### The original README follows: ###
+
+___
+
 # Timeseries Analysis #
 A chainable timeseries analysis tool.
 

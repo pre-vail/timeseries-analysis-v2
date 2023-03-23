@@ -1,36 +1,31 @@
 {
-	"author": {
-		"name": "Julien Loutre",
-		"email": "julien@twenty-six-medias.com",
-		"url": "http://www.twenty-six-medias.com/"
-	},
-	"name": "timeseries-analysis",
-	"description": "timeseries-analysis",
-	"version": "1.0.12",
-	"homepage": "https://github.com/26medias/timeseries-analysis",
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "https://raw.github.com/26medias/timeseries-analysis/master/LICENSE"
-		}
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/26medias/timeseries-analysis.git"
-	},
-	"main": "timeseries-analysis.js",
-	"engines": {
-		"node": "*"
-	},
-	"dependencies": {
-		"underscore": "latest",
-		"google-image-chart": "latest"
-	},
-	"devDependencies": {},
-	"readmeFilename": "README.md",
-	"bugs": {
-		"url": "https://github.com/26medias/timeseries-analysis/issues"
-	},
-	"_id": "timeseries-analysis@1.0.12",
-	"_from": "timeseries-analysis@latest"
+  "name": "timeseries-analysis-v2",
+  "version": "1.0.0",
+  "description": "A revamped version of the timeseries-analysis package from Julien Loutre.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --no-timeout"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pre-vail/timeseries-analysis/tree/timeseries-analysis-v2"
+  },
+  "author": "prevail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pre-vail/timeseries-analysis/issues"
+  },
+  "homepage": "https://github.com/pre-vail/timeseries-analysis/tree/timeseries-analysis-v2#readme",
+  "type": "module",
+  "devDependencies": {
+    "chai": "*"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "google-image-chart": "^1.2.0",
+    "underscore": "^1.13.6"
+  }
 }
