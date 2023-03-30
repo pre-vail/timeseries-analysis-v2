@@ -4,7 +4,7 @@ This is verion 2 of the original timeseries analysis package (v1) written by [Ju
 The main thing I did was to add a Prediction class which makes future predictions based on a given data set. Notes are given where I made slight changes to some of the v1 code. Lastly, this is a work in progress.
 
 ## Installation ##
-`npm install timeseries-analysis-v2`
+`npm install`
 
 
 ## CLI Args ##
@@ -41,6 +41,8 @@ The main thing I did was to add a Prediction class which makes future prediction
 `node . -s Prediction -n 2 -o 1 -v 1`
 
 ## Prediction ##
+
+#### *Currently this is the only way to make predictions* ####
 `npm test ./test/strategy/Prediction/Prediction.test.js`
 
 
